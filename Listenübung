@@ -1,0 +1,13 @@
+from funktionen import buchstabenanzahl_ist_gerade
+
+satz = "Du Suchender hast Mut und wirst die linke Allee nicht einschlagen sondern den Schatz entdecken sonst haben wir ihn gefunden"
+
+list_satz = satz.split(' ')
+listeneintrag = len(list_satz)
+
+for i in range(listeneintrag):
+    wort = list_satz[i]
+    gerades_wort_pruf = buchstabenanzahl_ist_gerade(wort)
+    e = list_satz[i][1]
+    if gerades_wort_pruf or e == "e":
+        print(wort)
